@@ -1,4 +1,4 @@
-# snoowrap-node-express-demo
+# Snoowrap Node Express Demo
 A Snoowrap demo built on node.js and express.js, used to interact with the Reddit API.
 
 ## Noted Dependencies
