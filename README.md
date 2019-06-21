@@ -26,7 +26,7 @@ A Snoowrap demo built on node.js and express.js, used to interact with the Reddi
         - redirectUrl (a URL an app provided to the app register by you)
         - scopes (a URL encoded string of Reddit API scopes: https://www.reddit.com/api/v1/scopes)
 
-##Helpful Links
+## Helpful Links
     - Reddit API Documentation: https://www.reddit.com/dev/api/
     - Snoowrap Documentation: https://not-an-aardvark.github.io/snoowrap/index.html
 
