@@ -1,4 +1,4 @@
-# Snoowrap Node Express Demo
+# snoowrap-node-express-demo
 A Snoowrap demo built on node.js and express.js, used to interact with the Reddit API.
 
 ## Noted Dependencies
@@ -31,7 +31,7 @@ A Snoowrap demo built on node.js and express.js, used to interact with the Reddi
 * Snoowrap Documentation: [https://not-an-aardvark.github.io/snoowrap/index.html](https://not-an-aardvark.github.io/snoowrap/index.html)
 
 ## Helpful Videos
-* Registering a new Reddit app: *coming soon*
-* Apply for oauth: *coming soon*
-* Setting up a local editor environment: *coming soon*
-* Downloading and running this project locally: *coming soon*
+* Registering a new Reddit app:*coming soon*
+* Apply for oauth:*coming soon*
+* Setting up a local editor environment:*coming soon*
+* Downloading and running this project locally:*coming soon*
