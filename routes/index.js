@@ -8,7 +8,7 @@ const snoowrap = require('snoowrap');
 const credConfig = require('../data/credentials.json'); //Manage credential parameters here
 
 const accessTokenUrl = 'https://www.reddit.com/api/v1/access_token';
-const redirectUrl = 'http://localhost:3002/auth/';
+const redirectUrl = credConfig.redirectUrl + '/auth/';
 
 var fs = require('fs');
 
@@ -33,8 +33,8 @@ router.get('/auth', (req, res) => {
       {
         url: accessTokenUrl,
         auth: {
-          user: credConfig.user,
-          pass: credConfig.pass
+          user: credConfig.clientId,
+          pass: credConfig.clientSecret
         },
         formData: {
           grant_type: 'authorization_code',
