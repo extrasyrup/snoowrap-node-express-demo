@@ -1,0 +1,210 @@
+@import url(normalize.css);
+@import url(skeleton.css);
+@import url(reset-overrides.css);
+body {
+  background-color: #ddd9d1;
+  color: #333;
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 1024px;
+  padding: 4rem; }
+  body a {
+    color: #4cacdb; }
+    body a:visited {
+      color: #2076a1; }
+  body h1 {
+    margin-bottom: 1rem; }
+  body h2, body h3, body h4, body h5, body h6 {
+    margin: 1rem 0 .5rem 0; }
+  body h1 {
+    font-size: 4.2rem; }
+    body h1 i {
+      font-size: 3.4rem; }
+  body h2 {
+    font-size: 3.6rem; }
+  body h3 {
+    font-size: 3rem; }
+  body h4 {
+    font-size: 2.6rem; }
+    body h4 i {
+      font-size: 2.4rem; }
+  body h5 {
+    font-size: 2.4rem; }
+  body h6 {
+    font-size: 2rem; }
+  body hr {
+    background-color: #bdb9b0;
+    display: block;
+    height: .2rem;
+    margin: 1rem 0; }
+
+#modal-blackout {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 9999; }
+
+#login-link {
+  color: #fff;
+  font-size: 10rem;
+  transition: font-size .2s; }
+  #login-link:hover {
+    font-size: 12rem; }
+
+#header ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0 0 1rem 0;
+  width: 100%; }
+  #header ul li#login-link {
+    display: block;
+    flex: 1;
+    text-align: right;
+    width: 100%; }
+  #header ul li#page-title {
+    align-items: center;
+    display: flex;
+    flex: 1; }
+  #header ul li#logged-user-info {
+    display: flex;
+    flex-direction: row;
+    height: 90px; }
+    #header ul li#logged-user-info #logged-user-img {
+      height: 90px;
+      width: 90px; }
+    #header ul li#logged-user-info #logged-user-details {
+      background-color: #eceae7;
+      flex: 1;
+      line-height: 3rem;
+      padding: 1.6rem 2rem 0 1.6rem; }
+      #header ul li#logged-user-info #logged-user-details #logged-user {
+        font-size: 2rem;
+        font-weight: bold; }
+    #header ul li#logged-user-info #logged-user-background {
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 90px;
+      position: relative;
+      width: 300px;
+      display: flex;
+      align-items: center; }
+  #header ul li i {
+    margin-right: .5rem; }
+
+#container {
+  display: flex;
+  flex-direction: row;
+  width: 100%; }
+  #container > div:first-child {
+    flex: 1;
+    margin-right: 4rem; }
+  #container > div:last-child {
+    flex: 2; }
+  #container > div .form-group {
+    display: flex;
+    flex-direction: row; }
+    #container > div .form-group input, #container > div .form-group select {
+      flex: 3;
+      font-size: 1.2rem; }
+    #container > div .form-group button, #container > div .form-group label {
+      flex: 1;
+      font-size: 1.2rem; }
+    #container > div .form-group label {
+      line-height: 3.8rem;
+      margin: 0 0 0 2rem; }
+    #container > div .form-group button {
+      margin-left: 2rem; }
+      #container > div .form-group button.btn {
+        background-color: #b4ab9f; }
+        #container > div .form-group button.btn:hover {
+          background-color: #9e9282; }
+  #container > div textarea#req-output {
+    background-color: #eae7e4;
+    font: 1.2rem "Courier New", Helvetica, Arial, sans-serif;
+    height: 420px;
+    width: 100%; }
+  #container > div #subreddit-listing .subreddit-item {
+    display: flex; }
+    #container > div #subreddit-listing .subreddit-item .vote-controls {
+      margin-right: 1.4rem;
+      text-align: center; }
+      #container > div #subreddit-listing .subreddit-item .vote-controls .upvote, #container > div #subreddit-listing .subreddit-item .vote-controls .downvote {
+        font-size: 3rem; }
+      #container > div #subreddit-listing .subreddit-item .vote-controls .upvote, #container > div #subreddit-listing .subreddit-item .vote-controls .upvote-count {
+        color: green; }
+      #container > div #subreddit-listing .subreddit-item .vote-controls .downvote, #container > div #subreddit-listing .subreddit-item .vote-controls .downvote-count {
+        color: red; }
+    #container > div #subreddit-listing .subreddit-item .article-content {
+      flex: 1; }
+      #container > div #subreddit-listing .subreddit-item .article-content a {
+        word-break: break-all; }
+      #container > div #subreddit-listing .subreddit-item .article-content h2 {
+        line-height: 4rem;
+        margin-top: .4rem; }
+      #container > div #subreddit-listing .subreddit-item .article-content .article-url {
+        padding: 2rem 0; }
+      #container > div #subreddit-listing .subreddit-item .article-content .media-preview-image {
+        border: 1px solid #64789d;
+        max-height: 300px;
+        padding: .6rem; }
+      #container > div #subreddit-listing .subreddit-item .article-content .article-text {
+        padding: 2rem 0; }
+        #container > div #subreddit-listing .subreddit-item .article-content .article-text h1 {
+          font-size: 3rem; }
+        #container > div #subreddit-listing .subreddit-item .article-content .article-text h2 {
+          font-size: 2.8rem; }
+        #container > div #subreddit-listing .subreddit-item .article-content .article-text h3 {
+          font-size: 2.6rem; }
+        #container > div #subreddit-listing .subreddit-item .article-content .article-text h4 {
+          font-size: 2.4rem; }
+        #container > div #subreddit-listing .subreddit-item .article-content .article-text h5 {
+          font-size: 2.2rem; }
+        #container > div #subreddit-listing .subreddit-item .article-content .article-text h6 {
+          font-size: 2rem; }
+      #container > div #subreddit-listing .subreddit-item .article-content .comments-container {
+        margin: 1rem 0 0 0; }
+        #container > div #subreddit-listing .subreddit-item .article-content .comments-container hr {
+          background: none;
+          border: none;
+          border-top: 2px dotted #b4ab9f;
+          display: block;
+          height: 1px;
+          margin: 2rem 0; }
+        #container > div #subreddit-listing .subreddit-item .article-content .comments-container .parent-reply {
+          border-left: .3rem solid #eaacac;
+          padding-left: 1rem; }
+          #container > div #subreddit-listing .subreddit-item .article-content .comments-container .parent-reply hr {
+            border-top: 1px dotted #b4ab9f;
+            margin: 1rem 0; }
+          #container > div #subreddit-listing .subreddit-item .article-content .comments-container .parent-reply .post-byline {
+            font-size: 1rem; }
+          #container > div #subreddit-listing .subreddit-item .article-content .comments-container .parent-reply .nested-reply {
+            border-left: .3rem solid #e8c28a;
+            padding-left: 1rem; }
+            #container > div #subreddit-listing .subreddit-item .article-content .comments-container .parent-reply .nested-reply .nested-reply {
+              border-left-color: #dbdb86; }
+              #container > div #subreddit-listing .subreddit-item .article-content .comments-container .parent-reply .nested-reply .nested-reply .nested-reply {
+                border-left-color: #7dcc7d; }
+                #container > div #subreddit-listing .subreddit-item .article-content .comments-container .parent-reply .nested-reply .nested-reply .nested-reply .nested-reply {
+                  border-left-color: #8282d2; }
+                  #container > div #subreddit-listing .subreddit-item .article-content .comments-container .parent-reply .nested-reply .nested-reply .nested-reply .nested-reply .nested-reply {
+                    border-left-color: #d67cd6; }
+    #container > div #subreddit-listing .subreddit-item .subreddit-item-div {
+      background-color: #bdb9b0;
+      display: block;
+      height: 1rem;
+      margin: 4rem 0; }
+  #container > div #subreddit-listing .content-box {
+    background-color: #eae7e4;
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+    padding: 1rem 3rem 1rem 1rem; }
+
+/*# sourceMappingURL=style.css.map */

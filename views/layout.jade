@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title= title
+    link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.2/css/all.css", integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay", crossorigin="anonymous")
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    if !authResponse
+      div#modal-blackout
+        a#login-link(title='Reddit Authorization', href='https://www.reddit.com/api/v1/authorize?client_id=#{credConfig.clientId}&response_type=code&state=v000001&redirect_uri=#{credConfig.redirectUrl}/auth/&duration=permanent&scope=#{credConfig.scopes}')
+          i.fab.fa-reddit
+    div#header
+      ul
+        li#page-title
+          h1
+            i.fab.fa-reddit
+            | Snoowrap Demo
+        if authResponse
+          li#logged-user-info
+            img#logged-user-img(src='#{authResponse.icon_img}')
+            div#logged-user-details
+              span#logged-user(title='Authorized User') #{authResponse.name}
+              <br>
+              span#logged-user-info(title='Total Karma and Coins')
+                <i class="far fa-smile-wink"></i>#{authResponse.link_karma + authResponse.comment_karma}
+                <i class="fas fa-coins"></i>#{authResponse.coins}
+            div#logged-user-background(style='background-image: url("#{authResponse.subreddit.display_name.banner_img}")')
+
+    block content
+    
+    script(src='/javascripts/scripts.js')

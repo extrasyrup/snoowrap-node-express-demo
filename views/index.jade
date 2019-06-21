@@ -1,0 +1,92 @@
+extends layout
+
+block content
+  #container
+    div
+      h4 <i class="fas fa-clipboard-list"></i> Request Options
+      hr
+      h5 Subreddit Information
+      div.form-group
+        input#txt-get-subreddit-rules.form-control(type='text', placeholder='/r/...', value='javascript')
+        button.btn#btn-get-subreddit-rules(type='submit', onclick='getSubredditRules();') Get Rules
+      hr
+      h5 Subreddit Posts
+      h6 Global Options
+      div.form-group
+        input#txt-post-count.form-control(type='number', name='txt-options', value='6')
+        label(for='chk-options') # of Posts
+      hr
+      h6 Get Hot Posts
+      div.form-group
+        input#txt-gethot.form-control(type='text', placeholder='/r/...', value='javascript')
+        button.btn#btn-get-hot(type='submit', onclick='getBySort("gethot");') Get
+      hr
+      h6 Get New Posts
+      div.form-group
+        input#txt-getnew.form-control(type='text', placeholder='/r/...', value='redditdev')
+        button.btn#btn-get-new(type='submit', onclick='getBySort("getnew");') Get
+      hr
+      h6 Get Rising Posts
+      div.form-group
+        input#txt-getrising.form-control(type='text', placeholder='/r/...', value='webdev')
+        button.btn#btn-get-rising(type='submit', onclick='getBySort("getrising");') Get
+      hr
+      h6 Get Top Posts
+      div.form-group
+        select#dd-options_gettop.form-control(name='dd-options_gettop')
+          option(value='day', selected) Day
+          option(value='hour') Hour
+          option(value='week') Week
+          option(value='month') Month
+          option(value='year') Year
+          option(value='all') All
+        label(for='dd-options_get-hot') Timeframe
+      div.form-group
+        input#txt-gettop.form-control(type='text', placeholder='/r/...', value='funny')
+        button.btn#btn-get-top(type='submit', onclick='getBySort("gettop");') Get
+      hr
+      h6 Get Controversial Posts
+      div.form-group
+        select#dd-options_getcontroversial.form-control(name='dd-options_getcontroversial')
+          option(value='day') Day
+          option(value='hour') Hour
+          option(value='week') Week
+          option(value='month') Month
+          option(value='year', selected) Year
+          option(value='all') All
+        label(for='dd-options_get-hot') Timeframe
+      div.form-group
+        input#txt-getcontroversial.form-control(type='text', placeholder='/r/...', value='pictures')
+        button.btn#btn-get-controversial(type='submit', onclick='getBySort("getcontroversial");') Get
+      hr
+    div
+      h4#title-render <i class="far fa-paper-plane"></i> Response Render
+        span
+      hr
+      div(style='display: none;').subreddit-item.content-box
+        div.vote-controls
+          div.upvote
+            <i class="far fa-arrow-alt-circle-up"></i>
+          div.upvote-count -
+          div.downvote
+            <i class="far fa-arrow-alt-circle-down"></i>
+        div.article-content
+          h2
+          <i class="fab fa-reddit"></i> 
+          span.label-username
+          span.label-postdate  on 00/00/0000
+          div.article-url
+          div.article-text
+          <i class="far fa-comment"></i> 
+          span.label-comments
+          &nbsp;&vert;&nbsp;
+          span.permalink
+          &nbsp;&vert;&nbsp;
+          div.comments-container
+      div#subreddit-listing
+        span#text-waiting ...
+      br
+      h4 <i class="fas fa-stream"></i> Response Output
+      hr
+      div.form-group
+        textarea#req-output.form-control

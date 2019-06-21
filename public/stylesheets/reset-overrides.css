@@ -1,0 +1,27 @@
+hr {
+    margin: 1rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+input, button {
+    margin-bottom: auto;
+}
+
+pre > code {
+    display: block;
+    margin: 0;
+    overflow: auto;
+    white-space: normal;
+    width: 530px;
+}
+
+code {
+    display: block;
+    margin: 0;
+    overflow: auto;
+    white-space: pre;
+    width: 530px;
+}
