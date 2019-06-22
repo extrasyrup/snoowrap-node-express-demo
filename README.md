@@ -19,7 +19,7 @@ See a brief video of the app in action: [https://youtu.be/rupM2BusQc0](https://y
   * Official Desktop Client, SourceTree, Tortoise
 
 ## Credentials Config
-* Config File Path: /data/credentials.json
+* Config File Path: /data/credentials.json (see helpful video below)
 * Parameters:
   * clientId (received from registered app)
   * clientSecret (received from registered app)
@@ -33,6 +33,7 @@ See a brief video of the app in action: [https://youtu.be/rupM2BusQc0](https://y
 
 ## Helpful Videos
 * Registering New Reddit API App: [https://youtu.be/SvCVNkhdLLs](https://youtu.be/SvCVNkhdLLs)
+* Configuring credentials.json Using Registered App: [https://youtu.be/YDbOVWnS2j8](https://youtu.be/YDbOVWnS2j8)
 * Starting Snoowrap Node Express Demo App: [https://youtu.be/rupM2BusQc0](https://youtu.be/rupM2BusQc0)
 * Setting up a local editing environment: *coming soon*
 * Downloading and running this project locally: *coming soon*
